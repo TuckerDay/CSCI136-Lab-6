@@ -3,7 +3,7 @@ package game;
 Author: Catey Meador
 Partner: Tucker Day
 File: Movement.java
-Purpose: 
+Purpose: determines player and enemy movement
 Creation Date: 3/10/18
 */
 
