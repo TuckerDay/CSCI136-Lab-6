@@ -4,7 +4,7 @@ package game;
 Author: Catey Meador
 Partner: Tucker Day
 File: Game.java
-Purpose: 
+Purpose: holds character name and current score, sets and updates high scores, and checks for collisions
 Creation Date: 3/10/18
 */
 
