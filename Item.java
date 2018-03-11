@@ -3,7 +3,7 @@ package game;
 Author: Catey Meador
 Partner: Tucker Day
 File: Item.java
-Purpose: 
+Purpose: holds image for items and their x and y positions, gets item image and position
 Creation Date: 3/10/18
 */
 
