@@ -13,7 +13,12 @@ public class Item {
 	private int xPos;
 	private int yPos;
 	
-	//constructor
+	public Item(String itemImage, int xPos, int yPos)
+	{
+		this.itemImage = itemImage;
+		this.xPos = xPos;
+		this.yPos = yPos;
+	}
 	
 	public String getItemImage()
 	{
