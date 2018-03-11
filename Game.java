@@ -19,7 +19,17 @@ public class Game {
 	private int boardWinner2Score;
 	private int boardWinner3Score;
 	
-	//constructor
+	public Game(String characterName, int score, String boardWinner1, String boardWinner2, String boardWinner3, int boardWinner1Score, int boardWinner2Score, int boardWinner3Score)
+	{
+		this.characterName = characterName;
+		this.score = score;
+		this.boardWinner1 = boardWinner1;
+		this.boardWinner2 = boardWinner2;
+		this.boardWinner3 = boardWinner3;
+		this.boardWinner1Score = boardWinner1Score;
+		this.boardWinner2Score = boardWinner2Score;
+		this.boardWinner3Score = boardWinner3Score;
+	}
 	
 	public String highScoreChecker()
 	{
