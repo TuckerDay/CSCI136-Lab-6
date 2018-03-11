@@ -11,7 +11,10 @@ public class Movement {
 	
 	private int direction;
 	
-	//constructor
+	public Movement(int direction)
+	{
+		this.direction = direction;
+	}
 	
 	public int keyListener()
 	{
