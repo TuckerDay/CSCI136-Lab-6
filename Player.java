@@ -6,67 +6,68 @@
 //Purpose: Enemy class for lab 6 game
 //Last Changed Date: 3/10/18
 //***************************************************************
-package game;
 
 public class Player {
 	
 	// Attributes
 	private String playerImage;
-	private int health;
+	//private int health;
 	private int xPos;
 	private int yPos;
-	private int numItems;
+	//private int numItems;
 	
 	// Constructor
-	public Player(String playerImage, int health, int xPos, int yPos, int numItems)
+	public Player(String playerImage, int xPos, int yPos)
 	{
 		this.playerImage = playerImage;
-		this.health = health;
+		//this.health = health;
 		this.xPos = xPos;
 		this.yPos = yPos;
-		this.numItems = numItems;
+		//this.numItems = numItems;
 	}
 	
 	// Methods
-	public int updatePosition()
-	{
-		// updates enemy position using movement class
+
+	public void setX(int x) {
+		this.xPos = x;
+	}
+
+	public void setY(int y) {
+		this.yPos = y;
 	}
 	
 	public String getPlayerImage()
 	{
-		// returns enemy image location
+		return playerImage;
 	}
 	
-	public int getHealth()
+	/*public int getHealth()
 	{
 		// returns health
+	}*/
+	
+	public int getX() {
+		return xPos;
+	}
+
+	public int getY() {
+		return yPos;
 	}
 	
-	public int getXPos()
-	{
-		// gets x position
-	}
-	
-	public int getYPos()
-	{
-		// gets y position
-	}
-	
-	public int getNumItems()
+	/*public int getNumItems()
 	{
 		// gets number of items
-	}
+	}*/
 	
-	public int setNumItems()
+	/*public int setNumItems()
 	{
 		// sets number of items
-	}
+	}*/
 	
-	public int setHealth()
+	/*public int setHealth()
 	{
 		//sets health
-	}
+	}*/
 	
 
 }
