@@ -6,7 +6,6 @@
 //Purpose: Enemy class for lab 6 game
 //Last Changed Date: 3/10/18
 //***************************************************************
-package game;
 
 public class Enemy {
 	
@@ -24,27 +23,28 @@ public class Enemy {
 	}
 	
 	// Methods
-	public int updatePosition()
-	{
-		// updates enemy position using movement class
+	
+	public void setX(int x) {
+		this.xPos = x;
+	}
+
+	public void setY(int y) {
+		this.yPos = y;
 	}
 	
 	public String getEnemyImage()
 	{
-		// returns enemy image location
+		return enemyImage;
 	}
 	
-	public int getXPos()
-	{
-		// gets x position
+	public int getX() {
+		return xPos;
 	}
-	
-	public int getYPos()
-	{
-		// gets y position
-	}
-	
-	
 
+	public int getY() {
+		return yPos;
+	}
+	
 }
-
+	
+	
