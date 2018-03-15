@@ -1,9 +1,8 @@
-package game;
 /*
 Author: Catey Meador
 Partner: Tucker Day
 File: Movement.java
-Purpose: determines player and enemy movement
+Purpose: 
 Creation Date: 3/10/18
 */
 
@@ -11,16 +10,8 @@ public class Movement {
 	
 	private int direction;
 	
-	public Movement(int direction)
-	{
-		this.direction = direction;
-	}
-	
-	public int keyListener()
-	{
-		//keylistener code
-	}
-	
+	//constructor
+
 	public int enemyMove()
 	{
 		//code for following player
