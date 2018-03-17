@@ -1,3 +1,5 @@
+package game;
+
 /*
 Catey Meador
 GameMainFrame.java
