@@ -6,6 +6,12 @@
 //Purpose: Enemy class for lab 6 game
 //Last Changed Date: 3/10/18
 //***************************************************************
+package game;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.Timer;
 
 public class Enemy {
 	
@@ -14,12 +20,19 @@ public class Enemy {
 	private int xPos;
 	private int yPos;
 	
+	GamePanel myPanel;
+	
+	
 	// Constructor
-	public Enemy(String enemyImage, int xPos, int yPos)
+	public Enemy(String enemyImage, int xPos, int yPos, GamePanel myPanel)
 	{
 		this.enemyImage = enemyImage;
 		this.xPos = xPos;
 		this.yPos = yPos;
+		
+		this.myPanel = myPanel;
+		myPanel.setFocusable(true);
+		
 	}
 	
 	// Methods
@@ -44,6 +57,8 @@ public class Enemy {
 	public int getY() {
 		return yPos;
 	}
+	
+
 	
 }
 	

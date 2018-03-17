@@ -4,7 +4,7 @@ package game;
 Author: Catey Meador
 Partner: Tucker Day
 File: Game.java
-Purpose: holds character name and current score, sets and updates high scores, and checks for collisions
+Purpose: 
 Creation Date: 3/10/18
 */
 
@@ -19,16 +19,10 @@ public class Game {
 	private int boardWinner2Score;
 	private int boardWinner3Score;
 	
-	public Game(String characterName, int score, String boardWinner1, String boardWinner2, String boardWinner3, int boardWinner1Score, int boardWinner2Score, int boardWinner3Score)
+	// Constructor
+	public Game()
 	{
-		this.characterName = characterName;
-		this.score = score;
-		this.boardWinner1 = boardWinner1;
-		this.boardWinner2 = boardWinner2;
-		this.boardWinner3 = boardWinner3;
-		this.boardWinner1Score = boardWinner1Score;
-		this.boardWinner2Score = boardWinner2Score;
-		this.boardWinner3Score = boardWinner3Score;
+		
 	}
 	
 	public String highScoreChecker()

@@ -1,13 +1,17 @@
 //***************************************************************
 //Author: Tucker Day
 //Partner: Catelyn Meador
-//File: Enemy.java
+//File: Player.java
 //
-//Purpose: Enemy class for lab 6 game
+//Purpose: PLayer class
 //Last Changed Date: 3/10/18
 //***************************************************************
+package game;
 
-public class Player {
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class Player implements KeyListener {
 	
 	// Attributes
 	private String playerImage;
@@ -16,14 +20,22 @@ public class Player {
 	private int yPos;
 	//private int numItems;
 	
+	GamePanel myPanel;
+	
+	
 	// Constructor
-	public Player(String playerImage, int xPos, int yPos)
+	public Player(String playerImage, int xPos, int yPos, GamePanel myPanel)
 	{
 		this.playerImage = playerImage;
 		//this.health = health;
 		this.xPos = xPos;
 		this.yPos = yPos;
 		//this.numItems = numItems;
+		
+		// Refers to panel
+		this.myPanel = myPanel;
+		myPanel.setFocusable(true);
+		myPanel.addKeyListener(this);
 	}
 	
 	// Methods
@@ -68,6 +80,42 @@ public class Player {
 	{
 		//sets health
 	}*/
+	
+	@Override
+	public void keyPressed(KeyEvent arg0) {
+		if(arg0.getKeyCode() == KeyEvent.VK_LEFT)
+		{
+			setX(getX()-10);
+		}
+		
+		else if(arg0.getKeyCode() == KeyEvent.VK_RIGHT)
+		{
+			setX(getX()+10);
+		}
+		
+		else if(arg0.getKeyCode() == KeyEvent.VK_UP)
+		{
+			setY(getY()-10);
+		}
+		
+		else if(arg0.getKeyCode() == KeyEvent.VK_DOWN)
+		{
+			setY(getY()+10);
+		}
+	myPanel.repaint();
+	}
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }
