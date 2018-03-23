@@ -42,6 +42,8 @@ public class GamePanel extends JPanel{
 	
 	Timer myTimer = new Timer(100, new timerListener());
 	
+	int scoreCount = 0;
+	
 	// Constructor
 	
 	public GamePanel() {
@@ -67,13 +69,14 @@ public class GamePanel extends JPanel{
 		// Enemy - Player collision
 		if (areRectsColliding(myEnemy.getX(), myEnemy.getX() + 100, myEnemy.getY(), myEnemy.getY() + 100, myPlayer.getX(), myPlayer.getX() + 100, myPlayer.getY(), myPlayer.getY() + 100) == true)
 		{
-			page.drawString("You lose!", 1000, 500);
+			page.drawString("YOU LOSE!", 1000, 500);
 		}
 		
 		// Player - Item collision
 		if (areRectsColliding(myItem.getX(), myItem.getX() + 100, myItem.getY(), myItem.getY() + 100, myPlayer.getX(), myPlayer.getX() + 100, myPlayer.getY(), myPlayer.getY() + 100) == true)
 		{
-			page.drawString("You lose!", 1000, 500);
+			page.drawString("SCORE!", 1000, 500);
+			scoreCount ++;
 		}
 		
 	}
@@ -85,6 +88,8 @@ public class GamePanel extends JPanel{
 		public void actionPerformed(ActionEvent arg0) {
 			myEnemy.setX(myEnemy.getX() + myMove.getChangeX());
 			myEnemy.setY(myEnemy.getY() + myMove.getChangeY());
+			
+			myScore.setText("Score: " + scoreCount);
 			repaint();
 		}
 		
