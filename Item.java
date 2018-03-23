@@ -14,18 +14,24 @@ public class Item {
 	private int yPos;
 	
 	//constructor
+	public Item (String itemImage, int xPos, int yPos, GamePanel myPanel)
+	{
+		this.itemImage = itemImage;
+		this.xPos = xPos;
+		this.yPos = yPos;
+	}
 	
 	public String getItemImage()
 	{
 		return itemImage;
 	}
 	
-	public int getXPos()
+	public int getX()
 	{
 		return xPos;
 	}
 
-	public int getYPos()
+	public int getY()
 	{
 		return yPos;
 	}
