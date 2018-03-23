@@ -26,16 +26,16 @@ public class GamePanel extends JPanel{
 	
 	// Attributes
 	
-	Player myPlayer = new Player("./src/Images/player.jpg",500,500, this);
+	Player myPlayer = new Player("./src/Images/player.jpg",500,500, this); // player
 	ImageIcon myIcon = new ImageIcon(myPlayer.getPlayerImage());
 	
-	Enemy myEnemy = new Enemy("./src/Images/enemy.jpg",100,100, this);
+	Enemy myEnemy = new Enemy("./src/Images/enemy.jpg",100,100, this); // enemy
 	ImageIcon myIcon2 = new ImageIcon(myEnemy.getEnemyImage());
 	
-	Item myItem = new Item("./src/Images/item.jpg",600,700, this);
+	Item myItem = new Item("./src/Images/item.jpg",600,700, this); // item
 	ImageIcon myIcon3 = new ImageIcon(myItem.getItemImage());
 	
-	JLabel myScore = new JLabel("Score: ");
+	JLabel myScore = new JLabel("Score: "); // score
 	Font myFont = new Font("Arial", Font.BOLD, 32);
 	
 	Movement myMove = new Movement(myPlayer.getX(), myPlayer.getY(), myEnemy.getX(), myEnemy.getY());
@@ -45,13 +45,13 @@ public class GamePanel extends JPanel{
 	int scoreCount = 0;
 	
 	// Constructor
-	
 	public GamePanel() {
 		
 		setLayout(new BorderLayout());
     	setPreferredSize(new Dimension(1920,1080));
     	setFocusable(true);
     	
+    	// Player Score
     	myScore.setFont(myFont);
     	add(myScore);
     	
@@ -95,6 +95,7 @@ public class GamePanel extends JPanel{
 		
 	}
 	
+	// Method for collision detection
 	private boolean areRectsColliding(int r1TopLeftX, int r1BottomRightX, int r1TopLeftY, int r1BottomRightY, int r2TopLeftX, int r2BottomRightX, int r2TopLeftY, int r2BottomRightY)
 	{
 		if (r1TopLeftX < r2BottomRightX && r1BottomRightX > r2TopLeftX && r1TopLeftY < r2BottomRightY && r1BottomRightY > r2TopLeftY)
