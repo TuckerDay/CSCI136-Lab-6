@@ -5,7 +5,7 @@ Author: Catey Meador
 Partner: Tucker Day
 File: Game.java
 Purpose: holds character name and current score, sets and updates high scores, and checks for collisions
-Creation Date: 3/10/18
+Creation Date: 3/24/18
 */
 
 public class Game {
@@ -31,21 +31,84 @@ public class Game {
 		this.boardWinner3Score = boardWinner3Score;
 	}
 	
-	public String highScoreChecker()
+	public void setCharacterName(String characterName)
 	{
-		return "updated high score stats";
+		this.characterName = characterName;
+	}
+
+	public void setScore(int score)
+	{
+		this.score = score;
+	}
+
+	public void setBoardWinner1(String boardWinner1)
+	{
+		this.boardWinner1 = boardWinner1;
+	}
+
+	public void setBoardWinner2(String boardWinner2)
+	{
+		this.boardWinner2 = boardWinner2;
+	}
+
+	public void setBoardWinner3(String boardWinner3)
+	{
+		this.boardWinner3 = boardWinner3;
+	}
+
+	public void setBoardWinner1Score(int boardWinner1Score)
+	{
+		this.boardWinner1Score = boardWinner1Score;
+	}
+
+	public void setBoardWinner2Score(int boardWinner2Score)
+	{
+		this.boardWinner2Score = boardWinner2Score;
+	}
+
+	public void setBoardWinner3Score(int boardWinner3Score)
+	{
+		this.boardWinner3Score = boardWinner3Score;
 	}
 	
-	private boolean collision(int r1TopLeftX, int r1BottomRightX,int r1TopLeftY, int r1BottomRightY, int r2TopLeftX,int r2BottomRightX, int r2TopLeftY, int r2BottomRightY)
-		{
-			if (r1TopLeftX < r2BottomRightX && r1BottomRightX > r2TopLeftX&& r1TopLeftY < r2BottomRightY && r1BottomRightY > r2TopLeftY)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+	public String getCharacterName()
+	{
+		return characterName;
+	}
+
+	public int getScore()
+	{
+		return score;
+	}
+
+	public String getBoardWinner1()
+	{
+		return boardWinner1;
+	}
+
+	public String getBoardWinner2()
+	{
+		return boardWinner2;
+	}
+
+	public String getBoardWinner3()
+	{
+		return boardWinner3;
+	}
+
+	public int getBoardWinner1Score()
+	{
+		return boardWinner1Score;
+	}
+
+	public int getBoardWinner2Score()
+	{
+		return boardWinner2Score;
+	}
+
+	public int getBoardWinner3Score()
+	{
+		return boardWinner3Score;
+	}
 
 }
