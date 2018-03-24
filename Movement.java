@@ -6,20 +6,53 @@ Purpose:
 Creation Date: 3/10/18
 */
 
+
+
 public class Movement {
 	
-	private int direction;
+	// Attributes
+	private int playerX; // player position
+	private int playerY;
 	
-	//constructor
+	private int enemyX; // enemy position
+	private int enemyY;
+	
+	private int changeX; // Slope of line to player
+	private int changeY;
 
-	public int enemyMove()
+	
+	// Constructor
+	public Movement(int playerX, int playerY, int enemyX, int enemyY)
 	{
-		//code for following player
+		this.playerX = playerX;
+		this.playerY = playerY;
+		this.enemyX = enemyX;
+		this.enemyY = enemyY;
 	}
 	
-	public int getDirection()
+	// Methods
+	public int getChangeX()
 	{
-		return direction;
+		if (playerX > enemyX)
+		{
+			return 5;
+		}
+		else
+		{
+			return -5;
+		}
 	}
+	public int getChangeY()
+	{
+		if (playerY > enemyY)
+		{
+			return 5;
+		}
+		else
+		{
+			return -5;
+		}
+	}
+	
 
 }
