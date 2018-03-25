@@ -5,7 +5,7 @@ Author: Catey Meador
 Partner: Tucker Day
 File: Game.java
 Purpose: holds character name and current score, sets and updates high scores, and checks for collisions
-Creation Date: 3/24/18
+Creation Date: 3/10/18
 */
 
 public class Game {
@@ -29,6 +29,26 @@ public class Game {
 		this.boardWinner1Score = boardWinner1Score;
 		this.boardWinner2Score = boardWinner2Score;
 		this.boardWinner3Score = boardWinner3Score;
+	}
+	
+	public void calculateScore()
+	{
+		if (score > getBoardWinner1Score())
+		{
+			setBoardWinner1(getCharacterName());
+			setBoardWinner1Score(getScore());
+		}
+		else if (score > getBoardWinner2Score())
+		{
+			setBoardWinner2(getCharacterName());
+			setBoardWinner2Score(getScore());
+		}
+		else if (score > getBoardWinner3Score())
+		{
+			setBoardWinner3(getCharacterName());
+			setBoardWinner3Score(getScore());
+		}
+		
 	}
 	
 	public void setCharacterName(String characterName)
